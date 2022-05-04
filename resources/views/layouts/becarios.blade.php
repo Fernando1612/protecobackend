@@ -58,6 +58,9 @@
               <li class="nav-menu_item">
                   <a href="{{route('cursos.index')}}" class="nav-menu_link nav-link" >Cursos</a>
               </li>
+              <li class="nav-menu_item">
+                  <a href="{{route('appProteco')}}" class="nav-menu_link nav-link" >App PROTECO</a>
+              </li>
             <!-- desktop -->
             <li class="nav-item dropdown nav-menu_item d-none d-md-block">
                 <div class="dropdown-nav">

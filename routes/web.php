@@ -61,7 +61,8 @@ Route::get('/admins/tickets/pagados', [App\Http\Controllers\AdminTicketControlle
 Route::get('/admins/tickets/sinficha', [App\Http\Controllers\AdminTicketController::class, 'sinficha'])->name('sinficha')->middleware('admin');
 Route::get('/admins/tickets/pendiente-pago', [App\Http\Controllers\AdminTicketController::class, 'pendientepago'])->name('pendientepago')->middleware('admin');
 
-
+// Agregar Seguridad necesaria
+Route::get('/becarios/appProteco', [App\Http\Controllers\AppProtecoController::class, 'index']) -> name('appProteco');
 
 Route::resource('admin', AdminUserController::class)->middleware('admin');
 Route::resource('admincursos', AdminCursosController::class)->middleware('admin');
