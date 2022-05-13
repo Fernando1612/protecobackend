@@ -72,6 +72,28 @@
     </nav>
   </header>
     <!-- Header -->
+
+
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+            @foreach ($talleres as $taller)
+                <!-- Post preview-->
+                <div class="post-preview">
+                      <h2 class="post-title">  {{ $taller->id }}</h2>
+                      <h3 class="post-subtitle"> {{ $taller->title }}</h3>
+                      <h3 class="post-subtitle"> {{ $taller->description }}</h3>
+                      <h3 class="post-subtitle"> {{ $taller->date }}</h3>
+                      <h3 class="post-subtitle"> {{ $taller->liga }}</h3>
+                    </a>
+
+                </div>
+                <!-- Divider-->
+                <hr class="my-4" />
+                @endforeach
+            </div>
+        </div>
+
    
     @yield('content')
 

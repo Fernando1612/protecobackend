@@ -3,9 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Repositories\Talleres;
+use Illuminate\Support\Facades\Http;
 
 class AppProtecoController extends Controller
 {
+
+    private $talleres;
+
+    public function __construct(Talleres $talleres)
+    {
+
+        $this->talleres = $talleres;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +24,9 @@ class AppProtecoController extends Controller
      */
     public function index()
     {
-        return view('becarios/appProteco');
+        $talleres = $this->talleres->all();
+        
+        return view('becarios/appProteco',compact('talleres'));
     }
 
     /**
@@ -46,6 +59,8 @@ class AppProtecoController extends Controller
     public function show($id)
     {
         //
+        $taller = $this->talleres->find($id);
+
     }
 
     /**

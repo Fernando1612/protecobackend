@@ -232,5 +232,7 @@ return [
          'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 
     ],
+    'base_uri' => env('BASE_URI', 'https://fastapiptc.herokuapp.com'),
+    'http_client' => env('HTTP_CLIENT', 'HttpClient'),
 
 ];
