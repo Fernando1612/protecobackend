@@ -72,11 +72,10 @@ class HttpClientRequest
 	public function post_m($url,$data)
 	{
 		$response = Http::post($this->baseUri . '/' . $url,[
-			'id' => 8,
-			'title' => 'laravel',
-			'url' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png'
+			'id' => $data['ID'],
+			'title' => $data['titulo'],
+			'url' => $data['link_imagen']
 		]);
-		dd($response);
 		//Se puede regresar el mensaje de exito 
 		//return json_decode($response->getBody()->getContents());
 	}
@@ -174,6 +173,26 @@ class HttpClientRequest
 			'id_material' => $data['ID_material'],
 			'title' => $data['titulo'],
 			'code' => $data['codigo']
+		]);
+		//Se puede regresar el mensaje de exito 
+		//return json_decode($response->getBody()->getContents());
+	}
+
+	public function put_a($url,$data,$id)
+	{
+		$response = Http::put($this->baseUri . '/' . $url,[
+			'id' => $id,
+			'url_consultancies' => $data['link']
+		]);
+		//Se puede regresar el mensaje de exito 
+		//return json_decode($response->getBody()->getContents());
+	}
+
+	public function put_con($url,$data,$id)
+	{
+		$response = Http::put($this->baseUri . '/' . $url,[
+			'id' => $id,
+			'url_announcement' => $data['link']
 		]);
 		//Se puede regresar el mensaje de exito 
 		//return json_decode($response->getBody()->getContents());

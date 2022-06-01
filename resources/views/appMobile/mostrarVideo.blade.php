@@ -41,7 +41,7 @@ td {
                               <button class="btn btn-danger btn-sm" type="submit">Delete</button>
                             </form>
                         </td>
-                </div>
+                </div> 
                 <!-- Divider-->
                 <hr class="my-4" />
                 </td>

@@ -24,7 +24,7 @@ class AppVideoController extends Controller
      */
     public function index()
     {
-        //
+        // 
     }
 
 
@@ -67,7 +67,7 @@ class AppVideoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
+    { 
         $videos = $this->videos->all($id);
         return view('appMobile.mostrarVideo',compact('videos','id'));
     }

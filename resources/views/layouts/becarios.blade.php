@@ -70,10 +70,10 @@
                     <div class="dropdown-content">
                       <a href="{{route('cursosApp.index')}}">Cursos</a>
                       <a href="{{route('talleres.index')}}">Talleres</a>
-                      <a href="{{route('talleres.index')}}">Asesorias</a>
+                      <a href="{{route('asesorias.index')}}">Asesorias</a>
                       <a href="{{route('materiales.index')}}">Material</a>
                       <a href="{{route('herramientas.index')}}">Herramientas</a>
-                      <a href="{{route('talleres.index')}}">Convocatoria</a>
+                      <a href="{{route('convocatorias.index')}}">Convocatoria</a>
                     </div>
                   </div>
               </li>

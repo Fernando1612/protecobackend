@@ -27,8 +27,8 @@ use App\Http\Controllers\AppHerramientaController;
 use App\Http\Controllers\AppMaterialController;
 use App\Http\Controllers\AppTemaController;
 use App\Http\Controllers\AppVideoController;
-
-
+use App\Http\Controllers\AppAsesoriaController;
+use App\Http\Controllers\AppConvocatoriaController;
 
 
 /*
@@ -74,6 +74,8 @@ Route::resource('herramientas', AppHerramientaController::class);
 Route::resource('materiales', AppMaterialController::class);
 Route::resource('temas',AppTemaController::class);
 Route::resource('videos',AppVideoController::class);
+Route::resource('asesorias', AppAsesoriaController::class);
+Route::resource('convocatorias', AppConvocatoriaController::class);
 
 
 Route::resource('admin', AdminUserController::class)->middleware('admin');

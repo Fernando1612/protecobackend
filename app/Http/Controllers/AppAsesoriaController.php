@@ -3,17 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Repositories\Materiales;
+use App\Repositories\Asesorias;
 use Illuminate\Support\Facades\Http;
 
-class AppMaterialController extends Controller
-{
-    private $materiales;
 
-    public function __construct(Materiales $materiales)
+class AppAsesoriaController extends Controller
+{
+    private $asesorias;
+
+    public function __construct(Asesorias $asesorias)
     {
 
-        $this->materiales = $materiales; 
+        $this->asesorias = $asesorias; 
     }
     /**
      * Display a listing of the resource.
@@ -22,8 +23,8 @@ class AppMaterialController extends Controller
      */
     public function index()
     {
-        $materiales = $this->materiales->all();
-        return view('appMobile.mostrarMaterial',compact('materiales'));
+        $asesorias = $this->asesorias->all();
+        return view('appMobile.mostrarAsesoria',compact('asesorias'));
     }
 
     /**
@@ -33,8 +34,7 @@ class AppMaterialController extends Controller
      */
     public function create()
     {
-        $materiales = $this->materiales->all();
-        return view('appMobile.crearMaterial',compact('materiales'));
+        //
     }
 
     /**
@@ -43,16 +43,9 @@ class AppMaterialController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    // Arreglar el añadido de materiales
     public function store(Request $request)
     {
-        $storeData=$request->validate([
-            'ID' => 'required|numeric',
-            'titulo' => 'required',
-            'link_imagen' => 'required'
-        ]);
-        $material = $this->materiales->create($storeData);
-        return redirect('materiales')->with('completado', 'El material ha sido guardado!');
+        //
     }
 
     /**
@@ -63,7 +56,7 @@ class AppMaterialController extends Controller
      */
     public function show($id)
     {
-        $material = $this->materiales->find($id);
+        //
     }
 
     /**
@@ -74,8 +67,9 @@ class AppMaterialController extends Controller
      */
     public function edit($id)
     {
-        $material = $this->materiales->find($id);
-        return view('appMobile.editarMaterial',compact('material'));
+        
+        $asesoria = $this->asesorias->find($id);
+        return view('appMobile.editarAsesoria',compact('asesoria'));
     }
 
     /**
@@ -88,11 +82,10 @@ class AppMaterialController extends Controller
     public function update(Request $request, $id)
     {
         $storeData=$request->validate([
-            'titulo' => 'required',
-            'link_imagen' => 'required'
+            'link' => 'required',
         ]);
-        $material = $this->materiales->update($id,$storeData);
-        return redirect('materiales')->with('completado', 'El material ha sido modificada!');
+        $asesoria = $this->asesorias->update($id,$storeData);
+        return redirect('asesorias')->with('completado', 'Las asesorías han sido modificadas!');
     }
 
     /**
@@ -103,7 +96,6 @@ class AppMaterialController extends Controller
      */
     public function destroy($id)
     {
-        $material = $this->materiales->remove($id);
-        return redirect('materiales')->with('completado', 'El material ha sido eliminado!');
+        //
     }
 }

@@ -24,7 +24,7 @@ class AppTemaController extends Controller
      */
     public function index()
     {
-        //
+        // 
     }
 
     /**
@@ -36,8 +36,9 @@ class AppTemaController extends Controller
     {
         $value = $request->header('referer');
         $values = explode("/", $value);
-        $temas = $this->temas->all($values[4]);
-        return view('appMobile.crearTema',compact('temas'));
+        $id = $values[4];
+        $temas = $this->temas->all($id);
+        return view('appMobile.crearTema',compact('temas','id'));
     }
 
     /**
@@ -60,12 +61,11 @@ class AppTemaController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     */
+     */ 
     public function show($id)
     {
-        $this->id_material = $id;
-        $temas = $this->temas->all($this->id_material);
-        return view('appMobile.mostrarTema',compact('temas'));
+        $temas = $this->temas->all($id);
+        return view('appMobile.mostrarTema',compact('temas','id'));
     }
 
     /**

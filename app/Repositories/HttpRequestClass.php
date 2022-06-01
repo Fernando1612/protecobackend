@@ -118,6 +118,18 @@ class HttpRequestClass
 		return $response;
 	}
 
+	public function put_a($url, $data,$id)
+	{
+		$response = $this->client->put_a($url,$data,$id);
+		return $response;
+	}
+
+	public function put_con($url, $data,$id)
+	{
+		$response = $this->client->put_con($url,$data,$id);
+		return $response;
+	}
+
 	public function delete($url)
 	{
 		$response = $this->client->delete($url);
