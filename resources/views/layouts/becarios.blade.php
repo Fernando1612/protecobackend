@@ -40,13 +40,17 @@
       <nav class="nav nav-home container">
           <div class="nav-ico">
               <!-- <img class="logo ico-proteco nav-logo nav-logo_color" src="./img/icons/personales/logo_color.png" alt="PROTECO"> -->
-              <div class="d-flex">
-                  <img class="logo ico-proteco nav-logo nav-logo_color" src="{{asset('img/icons/personales/logo_negro.png')}}" alt="PROTECO">
-                  <img class="logo ico-proteco nav-logo nav-logo_color" src="{{asset('img/icons/personales/UNAM_logobn1.png')}}" alt="PROTECO">
-                  <!-- <img class="logo ico-proteco nav-logo nav-logo_color" src="./img/icons/personales/fi_negro.svg" alt="PROTECO"> -->
-              </div>
-
-              <img class="logo ico-proteco nav-logo nav-logo_blanco" src="{{asset('img/icons/personales/logo_blanco.png')}}" alt="PROTECO">
+        <div class="d-flex">
+              <a title="Programa de Tecnología en Cómputo" href="{{route('home')}}">
+                <img class="nav-logo_desk d-none d-xl-block" src="{{asset('img/logo_blanco.png')}}" alt="Programa de Tecnología en Cómputo">
+              </a>
+              <a title="Universidad Nacional Autónoma de México" target="_blank" href="https://www.unam.mx/">
+                <img id="logo-unam" class="nav-logo_desk d-none d-xl-block" src="{{asset('img/UNAM.png')}}" alt="UNAM">
+              </a>
+            </div>
+            <a class="d-xl-none" title="Programa de Tecnología en Cómputo" href="{{route('home')}}">
+              <img class="nav-logo_mob" src="{{asset('img/logo_blanco.png')}}" alt="PROTECO">
+            </a>
           </div>
           <button class="nav-toggle" aria-label="Abrir menú">
               <i class="fas fa-bars"></i>
@@ -59,7 +63,19 @@
                   <a href="{{route('cursos.index')}}" class="nav-menu_link nav-link" >Cursos</a>
               </li>
               <li class="nav-menu_item">
-                  <a href="{{route('appProteco')}}" class="nav-menu_link nav-link" >App PROTECO</a>
+                <!-- Cambiar a index cursos xd inicio-->
+                  <!--<a href="{{route('talleres.index')}}" class="nav-menu_link nav-link" >App PROTECO</a>-->
+                  <div class="dropdown-nav">
+                    <button class="dropbtn d-flex justify-content-center align-items-center align-content-center">App Mobile <img class="d-block mx-2" src="img/icons/generales/flecha.png" alt="" width="20"></button>
+                    <div class="dropdown-content">
+                      <a href="{{route('cursosApp.index')}}">Cursos</a>
+                      <a href="{{route('talleres.index')}}">Talleres</a>
+                      <a href="{{route('talleres.index')}}">Asesorias</a>
+                      <a href="{{route('materiales.index')}}">Material</a>
+                      <a href="{{route('herramientas.index')}}">Herramientas</a>
+                      <a href="{{route('talleres.index')}}">Convocatoria</a>
+                    </div>
+                  </div>
               </li>
             <!-- desktop -->
             <li class="nav-item dropdown nav-menu_item d-none d-md-block">
@@ -116,7 +132,7 @@
   </header>
   @yield('content')
 
-    <!-- Footer -->
+   <!-- Footer -->
     <footer class="">
         <div class="container">
             <div class="row">
@@ -135,27 +151,58 @@
                 <div class="redes col-lg-4 col-md-12">
                     <h5 class="">Síguenos</h5>
                     <div class="d-flex">
-                        <a href="">
-                            <img src="img/fb.png" alt="">
-                        </a>
-                        <a href="">
-                            <img src="img/yb.png" alt="">
-                        </a>
-                        <a href="">
-                            <img src="img/ig.png" alt="">
-                        </a>
-                        <a href="">
-                            <img src="img/tw.png" alt="">
-                        </a>
-                        <a href="">
-                            <img src="img/in.png" alt="">
-                        </a>
+                      <a target="_blank" href="https://es-la.facebook.com/proteco/">
+                        <img src="img/fb.png" alt="">
+                      </a>
+                      <a target="_blank" href="https://www.youtube.com/c/PROTECOCursos/featured?app=desktop">
+                        <img src="img/yb.png" alt="">
+                      </a>
+                      <a target="_blank" href="https://www.instagram.com/protecounam/?hl=es">
+                        <img src="img/ig.png" alt="">
+                      </a>
+                      <a target="_blank" href="https://twitter.com/proteco?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                        <img src="img/tw.png" alt="">
+                      </a>
+                      <a target="_blank" href="https://www.linkedin.com/company/proteco">
+                        <img src="img/in.png" alt="">
+                      </a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-     <!-- Scripts -->
+    <!-- Messenger Plugin de chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin de chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "199785637919");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v12.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <!-- Scripts -->
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
     <script src="{{ asset('js/glider.min.js') }}"></script>

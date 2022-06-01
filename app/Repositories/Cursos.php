@@ -1,8 +1,9 @@
 <?php
 
+
 namespace App\Repositories;
 
-class Talleres extends HttpRequestClass
+class Cursos extends HttpRequestClass
 {
 
 	public function __construct()
@@ -19,7 +20,7 @@ class Talleres extends HttpRequestClass
 	public function all()
 	{
 
-		return $this->get('talleres');
+		return $this->get('courses');
 	}
 
 	/**
@@ -31,20 +32,20 @@ class Talleres extends HttpRequestClass
 	 */
 	public function find($id)
 	{
-		return $this->get("taller/{$id}");
+		return $this->get("course/{$id}");
 	}
 
 	public function create($storeData)
 	{
-		return $this->post('taller',$storeData);
+		return $this->post_c('course',$storeData);
 	}
 
 	public function update($id,$storeData)
 	{
-		return $this->put('taller'. '/' . $id,$storeData,$id);
+		return $this->put_c('course'. '/' . $id,$storeData,$id);
 	}
 	public function remove($id)
 	{
-		return $this->delete('taller'. '/' . $id);
+		return $this->delete('course'. '/' . $id);
 	}
 }

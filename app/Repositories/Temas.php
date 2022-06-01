@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-class Talleres extends HttpRequestClass
+class Temas extends HttpRequestClass
 {
 
 	public function __construct()
@@ -16,10 +16,9 @@ class Talleres extends HttpRequestClass
 	 *
 	 * @return mixed
 	 */
-	public function all()
+	public function all($id)
 	{
-
-		return $this->get('talleres');
+		return $this->get('topics'. '/' . $id);
 	}
 
 	/**
@@ -31,20 +30,21 @@ class Talleres extends HttpRequestClass
 	 */
 	public function find($id)
 	{
-		return $this->get("taller/{$id}");
+		return $this->get("topic/{$id}");
 	}
 
 	public function create($storeData)
 	{
-		return $this->post('taller',$storeData);
+		return $this->post_t('topics',$storeData);
 	}
 
 	public function update($id,$storeData)
 	{
-		return $this->put('taller'. '/' . $id,$storeData,$id);
+		return $this->put_t('topic'. '/' . $id,$storeData,$id);
 	}
 	public function remove($id)
 	{
-		return $this->delete('taller'. '/' . $id);
+		return $this->delete('topic'. '/' . $id);
 	}
+
 }

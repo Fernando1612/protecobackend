@@ -21,7 +21,12 @@ use App\Http\Controllers\FichasController;
 use App\Http\Controllers\FichasMontoController;
 use App\Http\Controllers\ImportFichaController;
 use App\Http\Controllers\AdminComprobantesController;
-
+use App\Http\Controllers\AppTallerController;
+use App\Http\Controllers\AppCursoController;
+use App\Http\Controllers\AppHerramientaController;
+use App\Http\Controllers\AppMaterialController;
+use App\Http\Controllers\AppTemaController;
+use App\Http\Controllers\AppVideoController;
 
 
 
@@ -61,8 +66,15 @@ Route::get('/admins/tickets/pagados', [App\Http\Controllers\AdminTicketControlle
 Route::get('/admins/tickets/sinficha', [App\Http\Controllers\AdminTicketController::class, 'sinficha'])->name('sinficha')->middleware('admin');
 Route::get('/admins/tickets/pendiente-pago', [App\Http\Controllers\AdminTicketController::class, 'pendientepago'])->name('pendientepago')->middleware('admin');
 
-// Agregar Seguridad necesaria
-Route::get('/becarios/appProteco', [App\Http\Controllers\AppProtecoController::class, 'index']) -> name('appProteco');
+
+
+Route::resource('talleres', AppTallerController::class);
+Route::resource('cursosApp', AppCursoController::class);
+Route::resource('herramientas', AppHerramientaController::class);
+Route::resource('materiales', AppMaterialController::class);
+Route::resource('temas',AppTemaController::class);
+Route::resource('videos',AppVideoController::class);
+
 
 Route::resource('admin', AdminUserController::class)->middleware('admin');
 Route::resource('admincursos', AdminCursosController::class)->middleware('admin');
