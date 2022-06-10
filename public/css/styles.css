@@ -74,7 +74,7 @@
   }
 
 /* Global */
-  *{ 
+  *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -147,11 +147,11 @@
     width: 200px;
     display: flex;
     padding: 8px 0;
-    align-content: center;
     align-items: center;
-    justify-content: center;
     transition: all .3s ease;
     position: relative;
+    justify-content: center;
+    align-content: flex-start;
   }
   .btn:hover{
     bottom: 2px;
