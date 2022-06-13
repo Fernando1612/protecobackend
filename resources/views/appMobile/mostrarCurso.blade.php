@@ -16,7 +16,7 @@ td {
     }
     .push-top {
       margin-top: 50px;
-    }
+}
 </style>
                 <table class="table">
                   <thead>

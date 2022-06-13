@@ -130,6 +130,7 @@
           </ul>
       </nav>
   </header>
+  
   @yield('content')
 
    <!-- Footer -->
