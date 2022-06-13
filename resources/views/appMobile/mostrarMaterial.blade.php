@@ -1,65 +1,14 @@
 @extends('layouts.becarios')
 
 @section('content')
-<style>
 
-{{-- For action buttons colors go to public>css>bootstrap.css --}}
-
-.table-container{
-margin: 4%;
-}
-
-table {
-width: 100%;
-
-table-layout: fixed;
-}
-
-td {
-width:100%;
-border:1px solid black;
-text-align: center;
-vertical-align: middle;
-}
-
-.container {
-max-width: 450px;
-}
-
-.push-top {
-margin-top: 50px;
-}
-
-{{-- Color de fondo de los titlos TH de la tabla  Hacerlos transparente--}}
-.table-warning{
---bs-table-bg: white ;
-}
-
-{{-- Btn Crear Nuevo Material --}}
-.btn-success{
-margin: 1%;
-}
-
-{{-- Alineando botones de Action --}}
-.btn-info, .btn-secondary, .btn-primary{
-margin-top: 1%;
-margin-bottom: 1%;
-margin-left: auto;
-margin-right: auto;
-display: inline-block;
-width: 80%;
-max-width: 80px;
-}
-
-
-</style>
 <div class="table-container">
-  <table class="table table-striped">
+  <table class="table table-striped table-hover" aria-label>
     <thead>
-      <tr class="table-warning">
-        <td>Titulo</td>
-        <td>Link de la imagen</td>
-        <td class="text-center">Action</td>
+      <tr>
+        <td scope="col">Titulo</td>
+        <td scope="col">Link de la imagen</td>
+        <td scope="col">Action</td>
       </tr>
     </thead>
     <tbody>
@@ -80,15 +29,13 @@ max-width: 80px;
               <button class="btn btn-danger btn-sm" type="submit" hidden>Delete</button>
             </form>
           </td>
-      </div>
-      <!-- Divider-->
-      <!-- <hr class="my-4" />
-      </td> ERA LO QUE ORIGINABA LAS LINEAS LOCAS -->
         </tr>
+      </div>
       @endforeach
       <!-- Divider-->
       <!-- <hr class="my-4" />
       </td>  -->
+      <br> <br> <br>
       <a class="btn btn-success" href="{{ route('materiales.create')}}"> Crear Nuevo Material</a>
     </tbody>
   </table>

@@ -800,3 +800,50 @@
     .mt-seccion{
       margin-top: 3rem;
     }
+
+/* ------------------- MostrarMateriales.blade.php ------------------- */
+
+.table-container{
+margin: 4%;
+}
+
+table {
+width: 100%;
+
+table-layout: fixed;
+}
+
+td {
+width:100%;
+text-align: center;
+vertical-align: middle;
+}
+
+.container {
+max-width: 450px;
+}
+
+.push-top {
+margin-top: 50px;
+}
+
+.table-warning{
+--bs-table-bg: white ;
+}
+
+
+.btn-success{
+margin: 1%;
+}
+
+.btn-info, .btn-secondary, .btn-primary, .btn-danger{
+margin-top: 1%;
+margin-bottom: 1%;
+margin-left: auto;
+margin-right: auto;
+display: inline-block;
+/*width: 80%;*/
+max-width: 80px;
+}
+
+/* ------------------- MostrarMateriales.blade.php ------------------- */
