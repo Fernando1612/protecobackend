@@ -800,3 +800,13 @@
     .mt-seccion{
       margin-top: 3rem;
     }
+
+  .btn-info, .btn-secondary, .btn-primary{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    width: 80%;
+    max-width: 80px;
+  }
