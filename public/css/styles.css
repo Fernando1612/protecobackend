@@ -833,7 +833,9 @@ margin-top: 50px;
 
 
 .btn-success{
-margin: 1%;
+margin-top: 1%;
+margin-bottom: 1%;
+max-width: 180px;
 }
 
 .btn-info, .btn-secondary, .btn-primary, .btn-danger{

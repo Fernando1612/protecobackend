@@ -1,14 +1,7 @@
 @extends('layouts.becarios')
 
 @section('content')
-<style>
-    .container {
-      max-width: 450px;
-    }
-    .push-top {
-      margin-top: 50px;
-    }
-</style>
+
 
 <div class="card push-top">
   <div class="card-header">
