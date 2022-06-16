@@ -74,7 +74,7 @@
   }
 
 /* Global */
-  *{ 
+  *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -147,11 +147,11 @@
     width: 200px;
     display: flex;
     padding: 8px 0;
-    align-content: center;
     align-items: center;
-    justify-content: center;
     transition: all .3s ease;
     position: relative;
+    justify-content: center;
+    align-content: flex-start;
   }
   .btn:hover{
     bottom: 2px;
@@ -801,6 +801,7 @@
       margin-top: 3rem;
     }
 
+<<<<<<< HEAD
   .btn-info, .btn-secondary, .btn-primary{
     margin-top: 1%;
     margin-bottom: 1%;
@@ -810,3 +811,51 @@
     width: 80%;
     max-width: 80px;
   }
+=======
+/* ------------------- MostrarMateriales.blade.php ------------------- */
+
+.table-container{
+margin: 4%;
+}
+
+table {
+width: 100%;
+
+table-layout: fixed;
+}
+
+td {
+width:100%;
+text-align: center;
+vertical-align: middle;
+}
+
+.container {
+max-width: 450px;
+}
+
+.push-top {
+margin-top: 50px;
+}
+
+.table-warning{
+--bs-table-bg: white ;
+}
+
+
+.btn-success{
+margin: 1%;
+}
+
+.btn-info, .btn-secondary, .btn-primary, .btn-danger{
+margin-top: 1%;
+margin-bottom: 1%;
+margin-left: auto;
+margin-right: auto;
+display: inline-block;
+/*width: 80%;*/
+max-width: 80px;
+}
+
+/* ------------------- MostrarMateriales.blade.php ------------------- */
+>>>>>>> e68d8f4b5ceb81c4db9199876677987e4370162c
