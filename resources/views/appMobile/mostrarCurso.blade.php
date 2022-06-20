@@ -1,3 +1,4 @@
+<!-- Vista principal cursos. -->
 @extends('layouts.becarios')
 
 @section('content')
@@ -9,12 +10,11 @@
         <th scope="col">Descripción</th>
         <th scope="col">Fecha</th>
         <th scope="col">Link de imagen</th>
-        <th scope="col">Action</th>
+        <th scope="col">Acción</th>
       </tr>
     </thead>
     <tbody>
       @foreach ($cursos as $curso)
-
       <tr>
         <td>{{ $curso->title }}</td>
         <td>{{ $curso->description }}</td>
@@ -29,10 +29,9 @@
             <button class="btn btn-danger btn-sm" type="submit">Borrar</button>
           </form>
         </td>
-
         <!-- Divider-->
         @endforeach
-        <a class="btn btn-success" href="{{ route('cursosApp.create')}}"> Crear Nuevo Cursos</a>
+        <a class="btn btn-success" href="{{ route('cursosApp.create')}}"> Crear nuevo curso</a>
     </tbody>
   </table>
 </div>

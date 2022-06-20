@@ -1,4 +1,4 @@
-<!-- Vista talleres -->
+<!-- Vista principal talleres -->
 
 @extends('layouts.becarios')
 
@@ -40,13 +40,13 @@
         </td>
 
         <!-- Divider-->
-        <hr class="my-4" />
+
         </td>
       </tr>
       @endforeach
-      <div class="container-sm">
-        <a class="btn btn-success" href="{{ route('talleres.create')}}"> Crear nuevo taller</a>
-      </div>
+      
+      <a class="btn btn-success" href="{{ route('talleres.create')}}"> Crear nuevo taller</a>
+      
     </tbody>
   </table>
 </div>
