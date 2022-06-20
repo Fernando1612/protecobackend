@@ -8,11 +8,11 @@
   <table class="table table-striped table-hover" aria-label>
     <thead>
       <tr>
-        <th scope="col">Titulo</th>
-        <th scope="col">Descripción</th>
-        <th scope="col">Fecha</th>
-        <th scope="col">Link de imagen</th>
-        <th scope="col">Acción</th>
+        <td>Titulo</td>
+        <td>Descripción</td>
+        <td>Fecha</td>
+        <td>Link de imagen</td>
+        <td>Acción</td>
       </tr>
     </thead>
     <tbody>

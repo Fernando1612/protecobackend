@@ -6,8 +6,8 @@
   <table class="table table-striped table-hover" aria-label>
     <thead>
       <tr>
-        <th scope="col">Link de las asesorías</th>
-        <th scope="col">Acción</th>
+        <td>Link de las asesorías</td>
+        <td>Acción</td>
       </tr>
     </thead>
     <tbody>
