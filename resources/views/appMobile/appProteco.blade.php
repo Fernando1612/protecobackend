@@ -26,27 +26,17 @@
         <!-- Se pone la palabra "Link" porque las url son muy grandes y se salen de su cuadro -->
         <td><a href="{{ $taller->liga }}"> Link </a></td>
         <td class="text-center">
-          <div class="container-sm">
-            <a href="{{ route('talleres.edit', $taller->id)}}" class="btn btn-primary btn-sm">Editar</a>
-          </div>
-          <br>
-          <div class="container-sm">
-            <form action="{{ route('talleres.destroy', $taller->id)}}" method="post" style="display: inline-block">
-              @csrf
-              @method('DELETE')
-              <button class="btn btn-danger btn-sm" type="submit">Borrar</button>
-            </form>
-          </div>
+          <a href="{{ route('talleres.edit', $taller->id)}}" class="btn btn-primary btn-sm">Editar</a>
+          <form action="{{ route('talleres.destroy', $taller->id)}}" method="post" style="display: inline-block">
+            @csrf
+            @method('DELETE')
+            <button class="btn btn-danger btn-sm" type="submit">Borrar</button>
+          </form>
         </td>
-
-        <!-- Divider-->
-
         </td>
       </tr>
       @endforeach
-      
       <a class="btn btn-success" href="{{ route('talleres.create')}}"> Crear nuevo taller</a>
-      
     </tbody>
   </table>
 </div>
