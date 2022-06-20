@@ -30,7 +30,7 @@
               <label for="link">Link</label>
               <input type="text" class="form-control" name="link" value="{{ $convocatoria[0]->url_announcement }}"/>
           </div>
-          <button type="submit" class="btn btn-success">Actualizar Asesorías</button>
+          <button type="submit" class="btn btn-success">Actualizar Convocatoria</button>
       </form>
       <a class="btn btn-primary" href="{{ route('convocatorias.index') }}"> Regresar</a>
   </div>
