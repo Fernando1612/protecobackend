@@ -4,7 +4,7 @@
 @section('content')
 <div class="card push-top">
   <div class="card-header">
-    <h2>Editar & Actualizar</h2>
+    Editar & Actualizar
   </div>
   <br>
   <div class="card-body">
