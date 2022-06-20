@@ -1,3 +1,5 @@
+<!-- Vista talleres -->
+
 @extends('layouts.becarios')
 
 @section('content')

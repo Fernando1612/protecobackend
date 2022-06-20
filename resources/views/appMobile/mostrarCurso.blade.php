@@ -5,11 +5,11 @@
   <table class="table table-striped table-hover" aria-label>
     <thead>
       <tr>
-        <td scope="col">Titulo</td>
-        <td scope="col">Descripción</td>
-        <td scope="col">Fecha</td>
-        <td scope="col">Link de imagen</td>
-        <td scope="col">Action</td>
+        <th scope="col">Titulo</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Link de imagen</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
