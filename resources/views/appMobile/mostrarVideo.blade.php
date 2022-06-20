@@ -25,12 +25,9 @@
               <button class="btn btn-danger btn-sm" type="submit">Borrar</button>
             </form>
           </td>
-      </div>
-      <!-- Divider-->
-      <hr class="my-4" />
-      </td>
-      </tr>
       @endforeach
+      <br> <br>
+      </div>
       <a class="btn btn-success" href="{{ route('videos.create', $id)}}"> Crear Nuevo Video</a>
     </tbody>
   </table>
